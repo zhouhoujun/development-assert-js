@@ -3,7 +3,7 @@
 This repo is for distribution on `npm`. The source for this module is in the
 [main repo](https://github.com/zhouhoujun/development-assert-js/src/mastert).
 Please file issues and pull requests against that repo.
-This package use to develop kit for typescript node project development via gulp tasks.
+This package use to develop kit for javascript tasks via gulp tasks.
 
 ## Install
 

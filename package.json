@@ -1,7 +1,7 @@
 {
   "name": "development-assert-js",
-  "version": "0.1.3",
-  "description": "development build tools for node.",
+  "version": "0.1.0",
+  "description": "development build tools assert for javascript.",
   "main": "./lib/index.js",
   "typings": "./lib/index",
   "scripts": {

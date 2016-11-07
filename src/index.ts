@@ -38,7 +38,7 @@ export class JsTasks implements IDynamicTasks {
         return [
             {
                 name: 'jscompile',
-                oper: Operation.build | Operation.e2e | Operation.test,
+                oper: Operation.build,
                 pipes: [
                     () => cache('javascript'),
                     () => sourcemaps.init(),

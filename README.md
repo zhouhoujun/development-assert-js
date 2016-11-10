@@ -44,14 +44,38 @@ Development.create(gulp, __dirname, {
             // releaseDist: 'release path',
             // depolyDist: 'depoly path'
             asserts:{
-                ts: {
+                // js assert default src: 'src/**/*.js'
+                js: {
                     //src: '...',
-                    //dist:'...',
+                    //testSrc: '...',
+                    //e2eSrc: '...',
+                    //watchSrc: '...'
+                    // dist: 'dist path',
+                    // buildDist:'build path',
+                    // releaseDist: 'release path',
+                    // depolyDist: 'depoly path'
                     loader: {
                         module:'development-assert-js',
+                        // add pipe works for module tasks.
+                        pipe(stream, config, dist, gulp){ ... }
                         pipes: Pipe[] | (config, dist, gulp)=> Pipe[],
                         output: OutputPipe[] | (stream, config, dist, gulp)=> OutputPipe[]
                     }
+                },
+                jsb: {
+                    src: 'jsb/**/*.js',
+                    //testSrc: '...',
+                    //e2eSrc: '...',
+                    //watchSrc: '...'
+                    // dist: 'dist path',
+                    // buildDist:'build path',
+                    // releaseDist: 'release path',
+                    // depolyDist: 'depoly path'
+                    module:'development-assert-js',
+                    // also can add pipe works for module tasks here.
+                    pipe(stream, config, dist, gulp){ ... }
+                    pipes: Pipe[] | (config, dist, gulp)=> Pipe[],
+                    output: OutputPipe[] | (stream, config, dist, gulp)=> OutputPipe[]
                 },
                 json: 'src/**/*.json',
                 css:'src/common/**/*.css',

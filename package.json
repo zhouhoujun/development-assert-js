@@ -16,8 +16,9 @@
   "keywords": [
     "development",
     "tool",
-    "typescript",
-    "node",
+    "javascript",
+    "es6",
+    "build",
     "babel"
   ],
   "author": "houjun",

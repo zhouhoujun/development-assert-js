@@ -1,5 +1,5 @@
 // import * as path from 'path';
-import { IDynamicTaskOption, Operation, IDynamicTasks, dynamicTask } from 'development-core';
+import { IDynamicTaskOption, Operation, IAsserts, IDynamicTasks, dynamicTask } from 'development-core';
 // import * as chalk from 'chalk';
 const cache = require('gulp-cached');
 const sourcemaps = require('gulp-sourcemaps');
@@ -8,12 +8,13 @@ const babel = require('gulp-babel');
 
 
 /**
- * js task optin.
+ * js assert task optin.
  * 
  * @export
  * @interface IJsTaskOption
+ * @extends {IAsserts}
  */
-export interface IJsTaskOption {
+export interface IJsTaskOption extends IAsserts {
 
     /**
      * babel 6 option.
@@ -31,14 +32,15 @@ export interface IJsTaskOption {
      */
     sourceMaps: string;
 }
+
 @dynamicTask
 export class JsTasks implements IDynamicTasks {
-
     tasks(): IDynamicTaskOption[] {
         return [
             {
                 name: 'jscompile',
                 oper: Operation.build,
+                watch: true,
                 pipes: [
                     () => cache('javascript'),
                     () => sourcemaps.init(),
@@ -56,11 +58,6 @@ export class JsTasks implements IDynamicTasks {
                     () => uglify(),
                     (config) => sourcemaps.write((<IJsTaskOption>config.option).sourceMaps || './sourcemaps')
                 ]
-            },
-            {
-                name: 'jswatch',
-                oper: Operation.build | Operation.e2e | Operation.test,
-                watchTasks: ['jscompile']
             }
         ];
     }

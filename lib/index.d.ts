@@ -1,5 +1,5 @@
-import { IDynamicTaskOption, IDynamicTasks } from 'development-core';
-export interface IJsTaskOption {
+import { IDynamicTaskOption, IAsserts, IDynamicTasks } from 'development-core';
+export interface IJsTaskOption extends IAsserts {
     babelOption: any;
     sourceMaps: string;
 }

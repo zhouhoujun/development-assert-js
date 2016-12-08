@@ -22,7 +22,7 @@ export interface IJsTaskOption extends IAsserts {
      * @type {*}
      * @memberOf IJsTaskOption
      */
-    babelOption: any;
+    babelOption?: any;
 
     /**
      * sourceMaps path.
@@ -30,7 +30,7 @@ export interface IJsTaskOption extends IAsserts {
      * @type {string}
      * @memberOf IJsTaskOption
      */
-    sourceMaps: string;
+    sourceMaps?: string;
 }
 
 @dynamicTask

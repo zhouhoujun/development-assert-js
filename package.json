@@ -1,56 +1,56 @@
 {
-  "name": "development-assert-js",
-  "version": "0.4.1",
-  "description": "javascript assert tasks for development tools.",
-  "main": "./lib/index.js",
-  "typings": "./lib/index",
-  "scripts": {
-    "gulp": "gulp",
-    "postinstall": "npm prune",
-    "reinstall": "npm cache clean && npm install",
-    "test": "gulp build test",
-    "prepublish": "gulp build --release",
-    "e2e": "protractor",
-    "e2e.live": "protractor --elementExplorer"
-  },
-  "keywords": [
-    "development",
-    "tool",
-    "gulp",
-    "javascript",
-    "es6",
-    "build",
-    "babel"
-  ],
-  "author": "houjun",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zhouhoujun/development-assert-js/issues"
-  },
-  "registry": "jspm",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zhouhoujun/development-assert-js.git"
-  },
-  "dependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "development-core": "^0.10.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-cached": "^1.1.0",
-    "gulp-sourcemaps": "^2.2.0",
-    "gulp-uglify": "^2.0.0"
-  },
-  "devDependencies": {
-    "development-tool": "^0.10.0",
-    "development-assert-ts": "^0.5.3",
-    "development-tool-node": "^0.6.2",
-    "bluebird": "^3.4.1",
-    "through2": "^2.0.1",
-    "ts-node": "^1.6.0",
-    "tslint": "^3.15.1",
-    "tslint-stylish": "^2.1.0-beta",
-    "typescript": "^2.0.3",
-    "zone.js": "^0.6.10"
-  },
-  "homepage": "https://github.com/zhouhoujun/development-assert-js#readme"
+    "name": "development-assert-js",
+    "version": "1.0.0",
+    "description": "javascript assert tasks for development tools.",
+    "main": "./lib/index.js",
+    "typings": "./lib/index",
+    "scripts": {
+        "gulp": "gulp",
+        "postinstall": "npm prune",
+        "reinstall": "npm cache clean && npm install",
+        "test": "gulp build test",
+        "prepublish": "gulp build --release",
+        "e2e": "protractor",
+        "e2e.live": "protractor --elementExplorer"
+    },
+    "keywords": [
+        "development",
+        "tool",
+        "gulp",
+        "javascript",
+        "es6",
+        "build",
+        "babel"
+    ],
+    "author": "houjun",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/zhouhoujun/development-assert-js/issues"
+    },
+    "registry": "jspm",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zhouhoujun/development-assert-js.git"
+    },
+    "dependencies": {
+        "babel-preset-es2015": "^6.18.0",
+        "development-core": "^1.*",
+        "gulp-babel": "^6.1.2",
+        "gulp-cached": "^1.1.0",
+        "gulp-sourcemaps": "^2.*",
+        "gulp-uglify": "^2.*"
+    },
+    "devDependencies": {
+        "development-tool": "^1.*",
+        "development-assert-ts": "^1.*",
+        "development-tool-node": "^1.*",
+        "bluebird": "^3.4.1",
+        "through2": "^2.0.1",
+        "ts-node": "*",
+        "tslint": "*",
+        "tslint-stylish": "*",
+        "typescript": "^2.*",
+        "zone.js": "*"
+    },
+    "homepage": "https://github.com/zhouhoujun/development-assert-js#readme"
 }

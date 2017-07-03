@@ -33,7 +33,7 @@ export interface IJsTaskOption extends IAsserts {
     sourceMaps?: string;
 }
 
-@dynamicTask
+@dynamicTask()
 export class JsTasks implements IDynamicTasks {
     tasks(): IDynamicTaskOption[] {
         return [

@@ -9,4 +9,5 @@ Development.create(gulp, __dirname, [{
     buildDist: 'build',
     testSrc: 'test/**/*.spec.ts',
     loader: 'development-tool-node'
-}]);
+}])
+.start();

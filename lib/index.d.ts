@@ -1,4 +1,6 @@
-import { IDynamicTaskOption, IAsserts, IDynamicTasks } from 'development-core';
+/// <reference types="gulp" />
+import { ITaskInfo, ITaskContext, IAssertDist, Pipe, PipeTask, IAsserts } from 'development-core';
+import { Gulp } from 'gulp';
 /**
  * js assert task optin.
  *
@@ -17,11 +19,20 @@ export interface IJsTaskOption extends IAsserts {
     /**
      * sourceMaps path.
      *
-     * @type {string}
+     * @type {string | boolean}
      * @memberOf IJsTaskOption
      */
-    sourceMaps?: string;
+    sourceMaps?: string | boolean;
+    /**
+     * js option.
+     *
+     * @type {boolean}
+     * @memberof IJsTaskOption
+     */
+    uglify?: boolean;
 }
-export declare class JsTasks implements IDynamicTasks {
-    tasks(): IDynamicTaskOption[];
+export declare class JsCompile extends PipeTask {
+    constructor(info: ITaskInfo);
+    getInfo(): ITaskInfo;
+    pipes(ctx: ITaskContext, dist: IAssertDist, gulp?: Gulp): Pipe[];
 }

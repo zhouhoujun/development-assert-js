@@ -1,7 +1,6 @@
 // import * as path from 'path';
 import { ITaskInfo, ITaskContext, IAssertDist, Pipe, task, PipeTask, IDynamicTaskOption, Operation, IAsserts, IDynamicTasks, dynamicTask } from 'development-core';
 import { Gulp } from 'gulp';
-import * as _ from 'lodash';
 // import * as chalk from 'chalk';
 const cache = require('gulp-cached');
 const sourcemaps = require('gulp-sourcemaps');
@@ -70,12 +69,12 @@ export class JsCompile extends PipeTask {
         if (option.uglify) {
             pipes.splice(0, 0, {
                 oper: Operation.deploy | Operation.release,
-                toTransform: (ctx) => _.isBoolean(option.uglify) ? uglify() : uglify(option.uglify)
+                toTransform: (ctx) => typeof option.uglify === 'boolean' ? uglify() : uglify(option.uglify)
             });
         }
 
         if (option.sourceMaps !== false) {
-            let mappath = (_.isBoolean(option.sourceMaps) || !option.sourceMaps) ? './sourcemaps' : option.sourceMaps;
+            let mappath = ((typeof option.sourceMaps === 'boolean') || !option.sourceMaps) ? './sourcemaps' : option.sourceMaps;
             pipes.push((ctx) => sourcemaps.write(mappath));
         }
         return pipes;

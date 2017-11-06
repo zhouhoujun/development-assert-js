@@ -1,6 +1,6 @@
 {
     "name": "development-assert-js",
-    "version": "2.0.2",
+    "version": "2.1.0",
     "description": "javascript assert tasks for development tools.",
     "main": "./lib/index.js",
     "typings": "./lib/index",
@@ -32,8 +32,9 @@
         "url": "https://github.com/zhouhoujun/development-assert-js.git"
     },
     "dependencies": {
+        "@types/gulp": "^3.8.34",
         "babel-preset-es2015": "^6.18.0",
-        "development-core": "^2.0.8",
+        "development-core": "^2.1.6",
         "gulp-babel": "^6.1.2",
         "gulp-cached": "^1.1.0",
         "gulp-sourcemaps": "2.*",
@@ -41,9 +42,9 @@
     },
     "devDependencies": {
         "bluebird": "^3.4.1",
-        "development-assert-ts": "^2.0.4",
-        "development-tool": "^2.0.9",
-        "development-tool-node": "^2.0.2",
+        "development-assert-ts": "^2.1.3",
+        "development-tool": "^2.1.3",
+        "development-tool-node": "^2.1.0",
         "through2": "^2.0.1",
         "ts-node": "*",
         "tslint": "*",
